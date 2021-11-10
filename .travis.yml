@@ -1,14 +1,14 @@
 language: node_js
 node_js:
-  - 10.13.0
+- 10.13.0
 install:
-  - npm install
+- npm install
 script:
-  - npm run test
+- npm run test
 branches:
   only:
-    - main
-    - dev
+  - main
+  - dev
 deploy:
   provider: heroku
   api_key:
@@ -16,3 +16,6 @@ deploy:
   app:
     master: travis-demo-prod
     dev: travis-demo-staging
+env:
+  global:
+    secure: mjHuSsDTI5FHE5p6jpS4Pxk0FIz/oDnrN5tHOVl82okOQXQxiHnfesCfugho/fYZpvIl5IRT0+5k8XqT123KKRtSj1bQO/JnScnwmv/pRErfWdsG6R+TEgheDngUoBPpCT5kYQaNzDiEJVwisXFRjRYhDv/7F1Z2BiqV/Osu6ZmsF+FTG6s560cK7wCWx8Qb3InUcah6/yUMFoL4PPI0si45xkHBLwUy21PwkmZScPPD4eyoC3/AJ2nSzux+j2P04R3GQtA0J3LJ976nCHQf7CxPfIfMRkD59nUmsVEaSWldIa3IAZ51Fr+lAL9SAiNUlMeUBxfJusJM9DlC4SFDG2EGz/fS7x8gWsdsEmjozvA0hBH+0f71KEmyQsohIEtZIZygBSAeUtH5Rl98L6ttJXWtJqEkqFyApNgLX+AuFRywvE8LTPY96R+bmWHJ0IS3yENdJsrs678VecZtI4w48d43INxvguZHfV5dpZZdDD+0HmdGrkE2qawMVugpTnOxBUxVuNfEJDPBzdSW6T/4X2zyS1wWfYagEE5qTc4yNkFAYv0OZtiRqkUarDqrW6y3P1OOQIzcdVup13PmXNw/jUd+AwmM/vu1BAlNYf5xIyUB2nSeOFH0VrjPR+vviqosGFXagBBLHkPJ3dBBEWCBWo7tHOORMLSQ39eStVuMZ2I=
